@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./img/icons/transfer-data.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 04</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
 
-    <load src="./partials/footer.html" />
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <p>
+          <a class="nav-logo" href="#search">Homework 04</a>
+        </p>
+      </nav>
+    </div>
+  </header>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+  <main>
+    <div class="container" id="search">
+      <form class="form" id="search-form">
+        <input class="input" type="text" name="searchQuery" placeholder="Search images..." required />
+        <button class="btn-search" type="submit">Search</button>
+      </form>
+    </div>
+
+    <div id="loader" class="loader hidden">
+      <span class="loader-sign"> Loading...</span>
+    </div>
+
+    <ul class="gallery"></ul>
+
+    <button class="btn-load-more hidden" type="button">Load more</button>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-desc">
+        Made with ✨ by
+        <a class="footer-link" href="https://github.com/goitacademy/vanilla-app-template" target="_blank"
+          rel="noopener noreferrer">
+          GoIT</a>
+        <a class="footer-link" href="https://goit.global/ua/" target="_blank" rel="noopener noreferrer">
+          team</a>
+        &
+        <a class="footer-link" href="https://github.com/veo8888/goit-advancedjs-hw-04" target="_blank"
+          rel="noopener noreferrer">
+          VEO</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>

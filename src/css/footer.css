@@ -1,5 +1,7 @@
 .footer {
+  z-index: 999;
   padding: 20px 0;
+  background-color: #ff6c0a3a;
 }
 .footer-desc {
   text-align: center;
@@ -11,11 +13,15 @@
   content: '';
   position: absolute;
   bottom: 6%;
-  left: 50%;
+  left: 47%;
   transform: translateX(-50%) skewX(-12deg);
   z-index: -1;
-  width: 110%;
+  width: 100%;
   height: 24%;
-  background-color: #41d1ff;
+  background-color: #ff6c0a;
   transition: 200ms ease;
+}
+.footer-link:hover::before,
+.footer-link:focus::before {
+  background-color: #41d1ff;
 }
